@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+            
+    <bean class="org.spring.constr_injector.Monitor" id="montr">
+    <constructor-arg name="mname" value="Accer"></constructor-arg>
+    <constructor-arg name="mprice" value="7000"></constructor-arg>
+    <constructor-arg name="mcolor" value="Black"></constructor-arg>
+    <constructor-arg name="msize" value="22 Inch"></constructor-arg>
+    </bean>
+    
+    <bean class="org.spring.constr_injector.Pc" id="pc">
+    <constructor-arg name="pcname" value="Hp"></constructor-arg>
+    <constructor-arg name="pcprice" value="54000"></constructor-arg>
+    <constructor-arg name="pccolor" value="Black"></constructor-arg>
+    <constructor-arg name="proccessor" value="Ryzon 5"></constructor-arg>
+    <constructor-arg name="monitor" ref="montr"></constructor-arg>
+    </bean>
+    
+
+</beans>
